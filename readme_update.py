@@ -1,4 +1,14 @@
+import feedparser, datetime
 
+# 로컬 테스트 시 ssl 인증서 문제 해결용
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
+# rss 추출
+feed = feedparser.parse("https://www.gowoong.com/rss")
+
+# README 양식
+markdown_text = """
 ###  🐱 github stats  
 
 <div id="main" align="center">
@@ -18,9 +28,14 @@
 
 ### 📕 Latest Blog Posts   
 
-<a href ="https://www.gowoong.com/25"> 크래프톤 정글 8기 에세이 </a> <br>
-<a href ="https://www.gowoong.com/24"> AWS IoT Core Fleet Provisioning을 구현해보자 </a> <br>
-<a href ="https://www.gowoong.com/23"> AWS IoT Core Device Shadow를 알아보자 </a> <br>
-<a href ="https://www.gowoong.com/22"> AWS IoT Core Custom Authorizer 적용해보자 2부 </a> <br>
-<a href ="https://www.gowoong.com/21"> AWS IoT Core Custom Authorizer 적용해보자 1부 </a> <br>
-<a href ="https://www.gowoong.com/16"> AWS Solution Architect Associate(SAA-C03) 취득 후기 </a> <br>
+"""
+
+# 최근 블로그 추가
+for i in feed['entries'][:6]:
+    markdown_text += f"<a href =\"{i['link']}\"> {i['title']} </a> <br>\n"
+    # print(i['link'], i['title'])
+
+# print(markdown_text)
+f = open("README.md",mode="w", encoding="utf-8")
+f.write(markdown_text)
+f.close()
