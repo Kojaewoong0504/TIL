@@ -18,9 +18,9 @@
 
 ### 📕 Latest Blog Posts   
 
+<a href ="https://www.gowoong.com/28"> 정글 8일차 TIL </a> <br>
 <a href ="https://www.gowoong.com/26"> [크래프톤 정글 8기] WEEK 0주차 회고 </a> <br>
 <a href ="https://www.gowoong.com/25"> 크래프톤 정글 8기 에세이 </a> <br>
 <a href ="https://www.gowoong.com/24"> AWS IoT Core Fleet Provisioning을 구현해보자 </a> <br>
 <a href ="https://www.gowoong.com/23"> AWS IoT Core Device Shadow를 알아보자 </a> <br>
 <a href ="https://www.gowoong.com/22"> AWS IoT Core Custom Authorizer 적용해보자 2부 </a> <br>
-<a href ="https://www.gowoong.com/21"> AWS IoT Core Custom Authorizer 적용해보자 1부 </a> <br>
